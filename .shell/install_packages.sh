@@ -30,7 +30,7 @@ packages=(
     emptty
 
     # editor
-    vim-python3
+    vim-huge-python3
 
     # screen shot
     flameshot
