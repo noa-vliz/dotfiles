@@ -5,7 +5,7 @@ home_dir="$HOME"
 
 function copy_files(){
 
-	rsync -av \
+	rsync -av --inplace --ignore-times \
   		--exclude='/.git/' \
   		--exclude='/.shell/' \
   		--include='/**.*/' \
@@ -13,7 +13,7 @@ function copy_files(){
   		--exclude='*' \
   		"$installer_dir/" "$home_dir/"
 
-	sudo rsync -av \
+	sudo rsync -av --inplace --ignore-times \
 		"$installer_dir/scripts/" "/usr/local/bin/"
 }
 
