@@ -39,7 +39,7 @@ while true; do
             copy_files
 
 	    sleep 1
-	    post_install
+#	    post_install
 
             echo -e "\n\e[1;32mInstallation complete!\e[0m"
             break
