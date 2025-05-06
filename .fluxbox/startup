@@ -1,0 +1,26 @@
+#!/bin/sh
+
+# 入力メソッド fcitx
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS="@im=fcitx"
+fcitx &
+
+# 通知
+dunst &
+
+# 解像度設定
+xrandr --output HDMI-1 --mode 1920x1080 --rate 60 &
+
+# コンポジター
+# 重たくなるので一時的に停止
+# xcompmgr &
+
+# 壁紙
+fbsetbg -f "/home/choco/Pictures/wp254324-cute-anime-girls-wallpapers.jpg" &
+
+# xterm
+xrdb -merge ~/.Xresources
+
+# Fluxbox 起動
+exec fluxbox

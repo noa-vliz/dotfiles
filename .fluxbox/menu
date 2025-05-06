@@ -1,0 +1,76 @@
+[begin] (FluxBox)
+    [submenu] (Development)
+        [exec] (CMake curses GUI [ccmake]) {xterm -e ccmake}
+        [exec] (Python) {xterm -e python}
+    [end]
+    [submenu] (Editors)
+        [exec] (Emacs) {xterm -e emacs}
+        [exec] (Vi) {xterm -e vi}
+        [exec] (Vim) {xterm -e vim}
+    [end]
+    [submenu] (Games)
+        [submenu] (Amusement)
+            [exec] (Xeyes) {xeyes}
+            [exec] (Xlogo) {xlogo}
+        [end]
+    [end]
+    [submenu] (Graphics)
+        [exec] (Flameshot) {flameshot}
+    [end]
+    [submenu] (Multimedia)
+        [exec] (ALSA mixer) {xterm -e alsamixer}
+        [exec] (OBS Studio) {obs}
+        [exec] (Volume Control) {pavucontrol}
+    [end]
+    [submenu] (Network)
+        [exec] (FireFox) {firefox}
+        [exec] (TkVNC) {xterm -e tkvnc}
+    [end]
+    [submenu] (Science)
+        [exec] (Xcalc) {xcalc}
+    [end]
+    [submenu] (Shells)
+        [exec] (Dash) {xterm -e dash -i}
+        [exec] (GIT) {xterm -e git}
+        [exec] (UXTerm) {uxterm}
+        [exec] (Xterm) {xterm}
+    [end]
+    [submenu] (System)
+        [submenu] (Settings)
+            [exec] (Fcitx 5 Configuration) {fcitx5-configtool}
+            [exec] (Fcitx Configuration) {fcitx-configtool}
+            [exec] (Xfontsel) {xfontsel}
+        [end]
+        [exec] (chronyc) {xterm -e chronyc}
+        [exec] (Fcitx) {fcitx}
+        [exec] (Fcitx 5) {fcitx5}
+        [exec] (Htop) {xterm -e htop}
+        [exec] (Top) {xterm -e top}
+        [exec] (Xconsole) {xconsole}
+        [exec] (Xload) {xload}
+    [end]
+    [submenu] (Utilities)
+        [exec] (Oclock) {oclock}
+        [exec] (Xclipboard) {xclipboard}
+        [exec] (Xclock [analog]) {xclock -analog}
+        [exec] (Xclock [digital]) {xclock -digital -update 1}
+        [exec] (Xclock [digital]) {xclock -digital}
+        [exec] (Xcutsel) {xcutsel}
+        [exec] (Xev) {xterm -e xev}
+        [exec] (Xkill) {xkill}
+        [exec] (Xrefresh) {xrefresh}
+        [exec] (Xsetroot) {xsetroot}
+    [end]
+    [separator]
+    [submenu] (FluxBox)
+        [workspaces] (Workspaces)
+        [submenu] (Styles)
+            [stylesdir] (/usr/share/fluxbox/styles)
+        [end]
+        [config] (Configure)
+        [reconfig] (Reconfig)
+        [restart] (Restart)
+        [separator]
+        [exit] (Exit)
+    [end]
+[end]

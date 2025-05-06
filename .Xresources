@@ -1,0 +1,3 @@
+XTerm*selectToClipboard: true
+xterm*font: *-fixed-*-*-*-18-*
+
