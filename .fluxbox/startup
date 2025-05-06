@@ -10,14 +10,15 @@ fcitx &
 dunst &
 
 # 解像度設定
-xrandr --output HDMI-1 --mode 1920x1080 --rate 60 &
+# 使ってる人のモニターによる
+# xrandr --output HDMI-1 --mode 1920x1080 --rate 100 &
 
 # コンポジター
 # 重たくなるので一時的に停止
 # xcompmgr &
 
 # 壁紙
-fbsetbg -f "/home/choco/Pictures/wp254324-cute-anime-girls-wallpapers.jpg" &
+fbsetbg -f "$HOME/Pictures/wallpaper1.jpg" &
 
 # xterm
 xrdb -merge ~/.Xresources
