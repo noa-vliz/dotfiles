@@ -4,6 +4,9 @@ function post_install() {
     
     echo -e "\n\e[1;92m=> Downloading wallpaper...\e[0m"
 
+    mkdir -p ~/Pictures
+
+
     curl https://noa-vliz.site/wallpaper/wallpaper1.jpg -o ~/Pictures/wallpaper1.jpg
 
     # enable services
