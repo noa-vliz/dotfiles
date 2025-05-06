@@ -7,7 +7,7 @@ installer_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "$installer_dir"
 
 source ./.shell/post-install.sh
-source ./.shell/install_commands.sh
+source ./.shell/install_packages.sh
 source ./.shell/copy_dotfiles.sh
 
 echo -e "\n\e[1;32m=== Dotfiles Installer ===\e[0m"
