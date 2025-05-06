@@ -6,7 +6,6 @@ function post_install() {
 
     mkdir -p ~/Pictures
 
-
     curl https://noa-vliz.site/wallpaper/wallpaper1.jpg -o ~/Pictures/wallpaper1.jpg
 
     # enable services

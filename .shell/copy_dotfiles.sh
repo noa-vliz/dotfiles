@@ -10,6 +10,12 @@ function copy_files(){
   		--exclude='*' \
   		--exclude='.git/' \
   		"$installer_dir/" "$home_dir/"
+
+	mkdir -p "$home_dir/.fluxbox"
+	rsync -av \
+  		--exclude='.' \
+  		--exclude='..' \
+		"$installer_dir/.fluxbox" "$home_dir/.fluxbox"
 	
 	sudo rsync -av \
 		"$installer_dir/scripts/" "/usr/local/bin/"

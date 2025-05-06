@@ -20,6 +20,7 @@ packages=(
     dbus
     dbus-libs
     dbus-x11
+    curl
 )
 
 missing=()
