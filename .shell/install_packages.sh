@@ -1,26 +1,60 @@
 #!/bin/bash
 
 packages=(
+    # window manager
     fluxbox
     xorg
+    
+    # web browser
     firefox
-    dunst
+
+    # fcitx
     fcitx
+    fcitx-mozc
+    fcitx-configtool
+    
+    # wallpaper
+    feh
+    
+    # terminal
     xterm
+    
+    # menumaker
     menumaker
+
+    # japanese fonts
     noto-fonts-cjk
     noto-fonts-emoji
+
+    # login manager
     emptty
-    vim-huge
-    git
-    rsync
+
+    # editor
+    vim-python3
+
+    # screen shot
     flameshot
+
+    # use in install script
+    rsync
+    curl
+
+    # sound
     alsa-utils
+    
+    # notify 
+    dunst
     libnotify
+
+    # dbus
     dbus
     dbus-libs
     dbus-x11
-    curl
+
+    # option
+    cmus
+    htop
+    github-cli
 )
 
 missing=()
