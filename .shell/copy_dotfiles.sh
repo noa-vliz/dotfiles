@@ -15,5 +15,7 @@ function copy_files(){
     # スクリプトを /usr/local/bin/ にコピー
     sudo rsync -av --inplace --ignore-times \
         "$installer_dir/scripts/" "/usr/local/bin/"
+
+
 }
 
