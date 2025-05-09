@@ -1,3 +1,8 @@
 XTerm*selectToClipboard: true
 xterm*font: *-fixed-*-*-*-18-*
+XTerm*vt100.translations: #override \
+    Shift Ctrl <Key> C: copy-selection(CLIPBOARD) \n\
+    Shift Ctrl <Key> V: insert-selection(CLIPBOARD)
 
+XTerm*background:	#000000
+XTerm*foreground:	#ffffff

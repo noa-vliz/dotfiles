@@ -1,5 +1,4 @@
 fcitx
-netsurf
 strawberry
 tint2conf
 sakra
@@ -14,3 +13,6 @@ firefox
 xterm
 alsamixer
 xcompmgr
+netsurf-gtk3
+netsurf
+cmus

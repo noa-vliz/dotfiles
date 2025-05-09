@@ -5,6 +5,7 @@
     [end]
     [submenu] (Editors)
         [exec] (Emacs) {xterm -e emacs}
+        [exec] (Neovim) {xterm -e nvim}
         [exec] (Vi) {xterm -e vi}
         [exec] (Vim) {xterm -e vim}
     [end]
@@ -23,16 +24,28 @@
         [exec] (Volume Control) {pavucontrol}
     [end]
     [submenu] (Network)
+        [exec] (Arena) {arena}
+        [exec] (Chimera) {chimera}
         [exec] (FireFox) {firefox}
+        [exec] (LFTP) {xterm -e lftp}
+        [exec] (Links) {xterm -e links}
+        [exec] (Lynx) {xterm -e lynx}
+        [exec] (Mosaic) {Mosaic}
+        [exec] (Netsurf) {netsurf}
         [exec] (TkVNC) {xterm -e tkvnc}
+        [exec] (W3m) {xterm -e w3m}
+        [exec] (w3m) {xterm -e w3m /usr/share/doc/w3m/MANUAL.html}
     [end]
     [submenu] (Science)
+        [exec] (bc) {xterm -e bc}
+        [exec] (dc) {xterm -e dc}
         [exec] (Xcalc) {xcalc}
     [end]
     [submenu] (Shells)
         [exec] (Dash) {xterm -e dash -i}
         [exec] (GIT) {xterm -e git}
         [exec] (UXTerm) {uxterm}
+        [exec] (Vifm) {xterm -e vifm}
         [exec] (Xterm) {xterm}
     [end]
     [submenu] (System)
@@ -46,11 +59,14 @@
         [exec] (Fcitx 5) {fcitx5}
         [exec] (Htop) {xterm -e htop}
         [exec] (Top) {xterm -e top}
+        [exec] (Virtual Machine Manager) {virt-manager}
         [exec] (Xconsole) {xconsole}
         [exec] (Xload) {xload}
     [end]
     [submenu] (Utilities)
+        [exec] (Info) {xterm -e info}
         [exec] (Oclock) {oclock}
+        [exec] (Winetricks) {winetricks --gui}
         [exec] (Xclipboard) {xclipboard}
         [exec] (Xclock [analog]) {xclock -analog}
         [exec] (Xclock [digital]) {xclock -digital -update 1}
