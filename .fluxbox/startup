@@ -11,7 +11,7 @@ dunst &
 
 # 解像度設定
 # 使ってる人のモニターによる
-xrandr --output HDMI-1 --mode 1920x1080 --rate 100 &
+#xrandr --output HDMI-1 --mode 1920x1080 --rate 100 &
 
 # コンポジター
 # 重たくなるので一時的に停止
