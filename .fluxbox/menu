@@ -1,10 +1,11 @@
 [begin] (FluxBox)
     [submenu] (Development)
         [exec] (CMake curses GUI [ccmake]) {xterm -e ccmake}
+        [exec] (GDB) {xterm -e gdb}
         [exec] (Python) {xterm -e python}
     [end]
     [submenu] (Editors)
-        [exec] (Emacs) {xterm -e emacs}
+        [exec] (Leafpad) {leafpad}
         [exec] (Neovim) {xterm -e nvim}
         [exec] (Vi) {xterm -e vi}
         [exec] (Vim) {xterm -e vim}
@@ -14,6 +15,8 @@
             [exec] (Xeyes) {xeyes}
             [exec] (Xlogo) {xlogo}
         [end]
+        [exec] (Hacknet) {steam steam://rungameid/365450}
+        [exec] (Supermarket Together) {steam steam://rungameid/2709570}
     [end]
     [submenu] (Graphics)
         [exec] (Flameshot) {flameshot}
@@ -21,20 +24,20 @@
     [submenu] (Multimedia)
         [exec] (ALSA mixer) {xterm -e alsamixer}
         [exec] (OBS Studio) {obs}
-        [exec] (Volume Control) {pavucontrol}
     [end]
     [submenu] (Network)
-        [exec] (Arena) {arena}
-        [exec] (Chimera) {chimera}
+        [exec] (ELinks) {xterm -e elinks}
         [exec] (FireFox) {firefox}
+        [exec] (Irssi) {xterm -e irssi}
         [exec] (LFTP) {xterm -e lftp}
         [exec] (Links) {xterm -e links}
         [exec] (Lynx) {xterm -e lynx}
-        [exec] (Mosaic) {Mosaic}
         [exec] (Netsurf) {netsurf}
+        [exec] (Steam) {steam}
         [exec] (TkVNC) {xterm -e tkvnc}
         [exec] (W3m) {xterm -e w3m}
         [exec] (w3m) {xterm -e w3m /usr/share/doc/w3m/MANUAL.html}
+        [exec] (WeeChat) {xterm -e weechat}
     [end]
     [submenu] (Science)
         [exec] (bc) {xterm -e bc}
@@ -45,13 +48,13 @@
         [exec] (Dash) {xterm -e dash -i}
         [exec] (GIT) {xterm -e git}
         [exec] (UXTerm) {uxterm}
-        [exec] (Vifm) {xterm -e vifm}
         [exec] (Xterm) {xterm}
     [end]
     [submenu] (System)
         [submenu] (Settings)
             [exec] (Fcitx 5 Configuration) {fcitx5-configtool}
             [exec] (Fcitx Configuration) {fcitx-configtool}
+            [exec] (NVIDIA X Server Settings) {nvidia-settings}
             [exec] (Xfontsel) {xfontsel}
         [end]
         [exec] (chronyc) {xterm -e chronyc}
@@ -59,14 +62,12 @@
         [exec] (Fcitx 5) {fcitx5}
         [exec] (Htop) {xterm -e htop}
         [exec] (Top) {xterm -e top}
-        [exec] (Virtual Machine Manager) {virt-manager}
         [exec] (Xconsole) {xconsole}
         [exec] (Xload) {xload}
     [end]
     [submenu] (Utilities)
         [exec] (Info) {xterm -e info}
         [exec] (Oclock) {oclock}
-        [exec] (Winetricks) {winetricks --gui}
         [exec] (Xclipboard) {xclipboard}
         [exec] (Xclock [analog]) {xclock -analog}
         [exec] (Xclock [digital]) {xclock -digital -update 1}

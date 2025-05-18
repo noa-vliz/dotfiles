@@ -55,6 +55,10 @@ packages=(
     cmus
     htop
     github-cli
+    clang
+    Bear
+    clang-tools-extra
+	
 )
 
 missing=()

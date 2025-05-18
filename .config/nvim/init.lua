@@ -94,7 +94,7 @@ require("lazy").setup({
         local opts = { noremap=true, silent=true, buffer=bufnr }
         vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
         vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
-        vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
+        vim.keymap.set('n', 'L', vim.lsp.buf.hover, opts)
         vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, opts)
         vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, opts)
         vim.keymap.set('n', '<space>ca', vim.lsp.buf.code_action, opts)
@@ -109,11 +109,34 @@ require("lazy").setup({
         end
       end
       
-      -- Zigサーバーの設定
       local lspconfig = require('lspconfig')
+      
+      -- Zigサーバーの設定
       lspconfig.zls.setup {
         capabilities = capabilities,
         on_attach = on_attach,
+      }
+      
+      -- Clangdの設定
+      lspconfig.clangd.setup {
+        capabilities = capabilities,
+        on_attach = on_attach,
+        cmd = {
+          "clangd",
+          "--background-index",
+          "--clang-tidy",
+          "--header-insertion=iwyu",
+          "--completion-style=detailed",
+          "--function-arg-placeholders",
+        },
+        -- compile_commands.jsonがない場合の設定
+        -- root_dir = lspconfig.util.root_pattern("compile_commands.json", "compile_flags.txt", ".git"),
+        init_options = {
+          clangdFileStatus = true,
+          usePlaceholders = true,
+          completeUnimported = true,
+          semanticHighlighting = true,
+        },
       }
     end
   },
@@ -127,3 +150,12 @@ vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
   end
 })
 
+-- C/C++ファイルを認識するための設定（デフォルトで認識されるが確実にするため）
+vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
+  pattern = {"*.c", "*.h", "*.cpp", "*.cxx", "*.hpp", "*.hxx"},
+  callback = function()
+    vim.opt_local.filetype = "c"
+  end
+})
+
+require("keymaps")

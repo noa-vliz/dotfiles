@@ -2,11 +2,12 @@ function post_install() {
     echo -e "\e[1;34m[+] Running post_install...\e[0m"
 
     
-    echo -e "\n\e[1;92m=> Downloading wallpaper...\e[0m"
+    echo -e "\n\e[1;92m=> Downloading wallpapers...\e[0m"
 
     # download wallpaper from my website
     mkdir -p ~/Pictures
     curl https://noa-vliz.site/wallpaper/wallpaper1.jpg -o ~/Pictures/wallpaper1.jpg
+    curl https://noa-vliz.site/wallpaper/wallpaper2.png -o ~/Pictures/wallpaper2.png
 
     echo -e "\n\e[1;92m=> Generating fluxbox menu...\e[0m"
     mmaker -f Fluxbox

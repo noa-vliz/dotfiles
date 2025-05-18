@@ -143,8 +143,8 @@ Control Mod4 F12 :TakeToWorkspace 12
 # Program launchers
 # ===============================
 
-# Mod4 + Q で xterm 起動
-Mod4 Q :Exec xterm
+# Mod4 + Q で uxterm 起動
+Mod4 Q :Exec uxterm
 
 # Mod4 + W で Firefox 起動
 Mod4 W :Exec firefox
